@@ -8,17 +8,17 @@ public class MaximumProblem {
 
         System.out.println("Welcome to Maximum Problem");
 
-        System.out.println("Enter 1st integer:");
-        int val1 = sc.nextInt();
-        System.out.println("Enter 2nd integer:");
-        int val2 = sc.nextInt();
-        System.out.println("Enter 3rd integer:");
-        int val3 = sc.nextInt();
+//        System.out.println("Enter 1st value:");
+//        Double val1 = sc.nextDouble();
+//        System.out.println("Enter 2nd value:");
+//        Double val2 = sc.nextDouble();
+//        System.out.println("Enter 3rd value:");
+//        Double val3 = sc.nextDouble();
 
         GenericClass genericClass = new GenericClass();
-        Integer max = genericClass.findMax(val1,val2,val3);
 
-        System.out.println("The largest integer is :"+max);
+        System.out.println("The largest value is :"+genericClass.findMax(2,9,4));
+        System.out.println("The largest value is :"+genericClass.findMax(0.84f,3.78f,9.83f));
 
     }
 }
