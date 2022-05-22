@@ -1,47 +1,19 @@
 package com.bridgelabz.maximumproblem;
 
-public class GenericClass {
+public class GenericClass<T extends Comparable<T>> {
 
-    public Integer findMax(Integer a, Integer b,Integer c){
-        Integer max = a;
+    public void testMaximum(T... input) {
 
-        if(max.compareTo(b)<0){
-            max = b;
+        Integer i=0;
+        T max = input[i];
+        for(T element: input){
+            if (input[i].compareTo(max) > 0)
+                max = input[i];
+            i++;
         }
-
-        if(max.compareTo(c)<0){
-            max = c;
-        }
-
-        return max;
+        System.out.println("The maximum Value is : "+max);
     }
 
-    public Float findMax(Float a, Float b,Float c){
-        Float max = a;
 
-        if(max.compareTo(b)<0){
-            max = b;
-        }
-
-        if(max.compareTo(c)<0){
-            max = c;
-        }
-
-        return max;
-    }
-
-    public String findMax(String a, String b,String c){
-        String max = a;
-
-        if(max.compareTo(b)<0){
-            max = b;
-        }
-
-        if(max.compareTo(c)<0){
-            max = c;
-        }
-
-        return max;
-    }
 
 }
